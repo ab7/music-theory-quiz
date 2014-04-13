@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Music Theory Quiz</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Londrina+Outline%7COverlock">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+  </head>
+  <body>
+    <div class="mainWrapper clearFix">
+      <aside class="progressWrapper floatR">
+        <div id="progressTitle">PROGRESS</div>
+        <div class="progressCircle">Q1</div>
+        <div class="progressCircle">Q2</div>
+        <div class="progressCircle">Q3</div>
+        <div class="progressCircle">Q4</div>
+        <div class="progressCircle">Q5</div>
+        <div class="progressCircle">Q6</div>
+        <div class="progressCircle">Q7</div>
+        <div class="progressCircle">Q8</div>
+        <div class="progressCircle">Q9</div>
+        <div class="progressCircle">Q10</div>
+        <div id="progressCount">0/10</div>
+      </aside>
+      <header>
+        <h1 id="mainTitle">Music Theory Quiz 1</h1>
+        <button id="startOver">Start Over</button>
+      </header>
+      <section id="questionWrapper">
+        <div id="questionText">
+          Which one of the symbols pictured below is a treble clef?
+        </div>
+        <div id="answerWrapper">
+          <div id="topChoices">
+            <button class="choice1">
+              <img class="choiceImg" src="img/bass_clef.png" alt="Treble Clef">
+            </button>
+            <button class="choice2">
+              <img class="choiceImg" src="img/treble_clef.png" alt="Treble Clef">
+            </button>
+          </div>
+          <div id="bottomChoices">
+            <button class="choice3">
+              <img class="choiceImg" src="img/common_time.png" alt="Treble Clef">
+            </button>
+            <button class="choice4">
+              <img class="choiceImg" src="img/alto_clef.png" alt="Treble Clef">
+            </button>
+          </div>
+        </div>
+        <footer id="feedbackWrapper">
+          <div id="needHint">
+            Stuck? Click here for a hint
+          </div>
+        </footer>
+      </section>
+    </div>
+  </body>
+</html>
