@@ -10,7 +10,7 @@ $(function () {
       $('.progressCircle').removeClass('correct incorrect');
       $('#progressCount').text('0/10');
       $('.choice').removeClass('greyOut');
-      $('.notes, .x').remove();
+      $('button').removeClass('notes x');
       $('button').prop('disabled', false);
       $('#startOver, .prevQ, .nextQ').fadeIn();
       $('section').hide();
