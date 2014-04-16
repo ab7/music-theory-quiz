@@ -254,6 +254,12 @@ header {
   width: 750px;
 }
 
+section {
+  display: none;
+  height: 460px;
+  position: relative;
+}
+
 
 /* ==========================================================================
    Custom Styles
@@ -264,9 +270,35 @@ header {
   border-top-left-radius: 30px;
   border-bottom-right-radius: 30px;
   height: 560px;
-  margin: 100px auto;
+  margin: 75px auto;
   text-align: center;
   width: 850px;
+}
+
+
+/*** next and previous buttons ***/
+.nextButtons {
+  font-size: 2.5em;
+  position: relative;
+  width: 750px;
+  z-index: 1;
+}
+
+.nextQ, .prevQ {
+  background-color: transparent;
+  border: none;
+  color: grey;
+  outline: none;
+  position: absolute;
+  top: 180px;
+}
+
+.nextQ {
+  right: 25px;
+}
+
+.prevQ {
+  left: 25px;;
 }
 
 /*** header ***/
@@ -309,17 +341,73 @@ header {
 }
 
 .progressCircle {
-  color: grey;
   background-color: #c9c9c9;
+  border: none;
   border-radius: 100%;
+  color: grey;
+  display: block;
+  font-size: .8em;
   height: 35px;
-  line-height: 35px;
   margin: 10px auto;
+  position: relative;
+  outline: none;
   width: 35px;
+}
+
+.progressCircleHL {
+  background-color: #a3a3a3;
 }
 
 #progressCount {
   padding: 15px 0
+}
+
+.notes {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 29px
+}
+
+.x {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 31px;
+}
+
+
+/*** welcome screen ***/
+#startQuiz {
+  display: block;
+  position: relative;
+}
+
+#startButton {
+  background-color: rgb(230, 190, 99);
+  border-radius: 25px;
+  color: #434343;
+  height: 35px;
+  margin-top: 15px;
+  outline: none;
+  width: 100px;
+}
+
+#startButton:hover {
+  background-color: rgba(230, 190, 99, 0.49);
+}
+
+#musicNotes {
+  margin-top: 10px;
+  margin-bottom: -150px;
+  width: 750px;
+}
+
+#musicTree {
+  position: absolute;
+  bottom: 0;
+  right: 50px;
+  width: 150px;
 }
 
 
@@ -327,16 +415,16 @@ header {
 #questionWrapper {
   height: 460px;
   width: 750px;
-  position: relative;
+  
 }
 
-#questionText {
+.questionText {
   color: #4d4d4d;
   font-size: 1.5em;
-  padding-top: 45px;
+  padding: 45px 50px 0;
 }
 
-#feedbackWrapper {
+.feedbackWrapper {
   background-color: #d4d4d4;
   height: 100px;
   width: 750px;
@@ -344,16 +432,53 @@ header {
   bottom: 0;
 }
 
-#needHint {
+.needHint {
+  background-color: transparent;
+  border: none;
   color: grey;
   font: .8em Arial;
-  padding: 45px 0 0 0;
+  margin: 45px 0 0 0;
+  outline: none;
+}
+
+.hint {
+  color: grey;
+  display: none;
+  padding: 42px 50px;
+}
+
+.correctText, .incorrectText {
+  display: none;
+}
+
+.correctText {
+  color: #8996f0;
+  font: 3em 'Oleo Script', Arial;
+  margin-top: 20px;
+}
+
+.incorrectText {
+  color: #7b4848;
+  font: 1.5em 'Oleo Script', Arial;
+  margin-top: 18px;
+}
+
+.qPic {
+  width: 40px;
+}
+
+.qPic2 {
+  width: 100px;
+}
+
+#measuresPic {
+  width: 450px;
 }
 
 
 /*** user choices ***/
-#answerWrapper {
-  height: 250px;
+.answerWrapper {
+  height: 260px;
   margin-top: 25px;
 }
 
@@ -361,20 +486,25 @@ header {
   width: 60px;
 }
 
-#topChoices {
+.topChoices {
   padding: 25px 0;
 }
 
-#bottomChoices {
+.bottomChoices {
   padding: 25px 0 0;
 }
 
-.choice1, .choice2, .choice3, .choice4 {
+.choice {
   background-color: transparent;
   border: none;
+  font-size: 1.5em;
   outline: none;
   display: inline-block;
   margin: 0 60px; 
+}
+
+.greyOut {
+  opacity: .1;
 }
 
 
