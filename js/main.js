@@ -63,14 +63,12 @@ $(function () {
         $(this).removeClass('greyOut');
         question.find('.hint, .needHint').hide();
         question.find('.correctText').fadeIn();
-        $(progress).addClass('correct');
-        $(progress).append('<img class="notes" src="./img/notes2.png" alt="notes">');
+        $(progress).addClass('notes');
       } else {
         question.find('.c' + qNum).removeClass('greyOut');
         question.find('.hint, .needHint').hide();
         question.find('.incorrectText').fadeIn();
-        $(progress).addClass('incorrect');
-        $(progress).append('<img class="x" src="./img/x.png" alt="x">');
+        $(progress).addClass('x');
       }
       question.find('button').prop('disabled', true);
       $('#progressCount').text((parseInt($('#progressCount').text().charAt(0), 16) + 1) + '/10');
