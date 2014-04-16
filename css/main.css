@@ -452,13 +452,13 @@ section {
 }
 
 .correctText {
-  color: #8996f0;
+  color: #5E7A9B;
   font: 3em 'Oleo Script', Arial;
   margin-top: 20px;
 }
 
 .incorrectText {
-  color: #7b4848;
+  color: #9a3131;
   font: 1.5em 'Oleo Script', Arial;
   margin-top: 18px;
 }
