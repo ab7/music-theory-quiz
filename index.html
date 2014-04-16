@@ -4,7 +4,7 @@
   <head>
     <title>Music Theory Quiz</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Londrina+Outline%7COverlock">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Londrina+Outline%7COverlock%7COleo+Script">
     <link rel="stylesheet" href="css/main.css">
     <script src="//code.jquery.com/jquery.min.js"></script>
     <script src="js/main.js"></script>
@@ -13,50 +13,448 @@
     <div class="mainWrapper clearFix">
       <aside class="progressWrapper floatR">
         <div id="progressTitle">PROGRESS</div>
-        <div class="progressCircle">Q1</div>
-        <div class="progressCircle">Q2</div>
-        <div class="progressCircle">Q3</div>
-        <div class="progressCircle">Q4</div>
-        <div class="progressCircle">Q5</div>
-        <div class="progressCircle">Q6</div>
-        <div class="progressCircle">Q7</div>
-        <div class="progressCircle">Q8</div>
-        <div class="progressCircle">Q9</div>
-        <div class="progressCircle">Q10</div>
+        <button class="progressCircle pc1">Q1</button>
+        <button class="progressCircle pc2">Q2</button>
+        <button class="progressCircle pc3">Q3</button>
+        <button class="progressCircle pc4">Q4</button>
+        <button class="progressCircle pc5">Q5</button>
+        <button class="progressCircle pc6">Q6</button>
+        <button class="progressCircle pc7">Q7</button>
+        <button class="progressCircle pc8">Q8</button>
+        <button class="progressCircle pc9">Q9</button>
+        <button class="progressCircle pc10">Q10</button>
         <div id="progressCount">0/10</div>
       </aside>
       <header>
         <h1 id="mainTitle">Music Theory Quiz 1</h1>
         <button id="startOver">Start Over</button>
       </header>
-      <section id="questionWrapper">
-        <div id="questionText">
-          Which one of the symbols pictured below is a treble clef?
+      <div id="questionWrapper">
+        <div class="nextButtons">
+          <button class="prevQ">&lt;</button>
+          <button class="nextQ">&gt;</button>
         </div>
-        <div id="answerWrapper">
-          <div id="topChoices">
-            <button class="choice1">
-              <img class="choiceImg" src="img/bass_clef.png" alt="Treble Clef">
-            </button>
-            <button class="choice2">
-              <img class="choiceImg" src="img/treble_clef.png" alt="Treble Clef">
-            </button>
+        <section id="startQuiz">
+          <div class="questionText">
+            Welcome to your first music theory quiz! This quiz will cover some of the new concepts you just learned. Feel free to do the questions in any order by clicking the question circles in the progress bar. There are hints at the bottom of each question if you get stuck.
           </div>
-          <div id="bottomChoices">
-            <button class="choice3">
-              <img class="choiceImg" src="img/common_time.png" alt="Treble Clef">
-            </button>
-            <button class="choice4">
-              <img class="choiceImg" src="img/alto_clef.png" alt="Treble Clef">
-            </button>
+          <div class="questionText">
+            Click start when you are ready!
           </div>
-        </div>
-        <footer id="feedbackWrapper">
-          <div id="needHint">
-            Stuck? Click here for a hint
+          <button id="startButton">Start!</button>
+          <img id="musicTree" src="img/music_tree.png" alt="music tree">
+        </section>  
+        <section id="q1" data-check="927">
+          <div class="questionText">
+            Which one of the symbols pictured below is a <em>treble clef</em>?
           </div>
-        </footer>
-      </section>
+          <div class="answerWrapper">
+            <div class="topChoices">
+              <button class="choice c1" data-choice="4721">
+                <img class="choiceImg" src="img/9271.png" alt="q1_clef">
+              </button>
+              <button class="choice c2" data-choice="4562">
+                <img class="choiceImg" src="img/9272.png" alt="q1_clef">
+              </button>
+            </div>
+            <div class="bottomChoices">
+              <button class="choice c3" data-choice="0893">
+                <img class="choiceImg" src="img/9273.png" alt="q1_clef">
+              </button>
+              <button class="choice c4" data-choice="4324">
+                <img class="choiceImg" src="img/9274.png" alt="q1_clef">
+              </button>
+            </div>
+          </div>
+          <div class="feedbackWrapper">
+            <button class="needHint">
+              Stuck? Click here for a hint
+            </button>
+            <div class="hint">
+              The bottom right symbol is an <em>alto clef</em> and the bottom left symbol is not even a clef, its the shorthand way of representing the 4/4 time signature (common time!)
+            </div>
+            <div class="correctText">
+              Correct! Great job!
+            </div>
+            <div class="incorrectText">
+              Sorry... Thats not the correct answer.<br> 
+              The treble clef is highlighted above.
+            </div>
+          </div>
+        </section>
+        <section id="q2" data-check="240">
+          <div class="questionText">
+            Which one of the pictures below best represents a <em>time signature</em>?
+          </div>
+          <div class="answerWrapper">
+            <div class="topChoices">
+              <button class="choice c1" data-choice="2311">
+                <img class="choiceImg" src="img/256.png" alt="q2_time">
+              </button>
+              <button class="choice c2" data-choice="2642">
+                <img class="choiceImg" src="img/g_maj.png" alt="q2_time">
+              </button>
+            </div>
+            <div class="bottomChoices" data-choice="1343">
+              <button class="choice c3" data-choice="0893">
+                <img class="choiceImg" src="img/f_maj.png" alt="q2_time">
+              </button>
+              <button class="choice c4" data-choice="2044">
+                <img class="choiceImg" src="img/3_4.png" alt="q2_time">
+              </button>
+            </div>
+          </div>
+          <div class="feedbackWrapper">
+            <button class="needHint">
+              Stuck? Click here for a hint
+            </button>
+            <div class="hint">
+              A time signature tells us how many beats are in the measure and what note value gets the beat!
+            </div>
+            <div class="correctText">Correct! Great job!</div>
+            <div class="incorrectText">
+              Sorry... Thats not the correct answer.<br> 
+              The 3/4 time signature is highlighted above.
+            </div>
+          </div>
+        </section>
+        <section id="q3" data-check="019">
+          <div class="questionText">
+            Which one of the pictures below best represents a <em>key signature</em>?
+          </div>
+          <div class="answerWrapper">
+            <div class="topChoices">
+              <button class="choice c1" data-choice="3271">
+                <img class="choiceImg" src="img/g_maj.png" alt="q3_key">
+              </button>
+              <button class="choice c2" data-choice="0952">
+                <img class="choiceImg" src="img/q3_44.png" alt="q3_key">
+              </button>
+            </div>
+            <div class="bottomChoices">
+              <button class="choice c3" data-choice="2873">
+                <img class="choiceImg" src="img/q3_com.png" alt="q3_key">
+              </button>
+              <button class="choice c4" data-choice="7844">
+                <img class="choiceImg" src="img/q3_ba.png" alt="q3_key">
+              </button>
+            </div>
+          </div>
+          <div class="feedbackWrapper">
+            <button class="needHint">
+              Stuck? Click here for a hint
+            </button>
+            <div class="hint">
+              A key signature tells us what notes will be flat or sharp.
+            </div>
+            <div class="correctText">
+              Correct! Great job!
+            </div>
+            <div class="incorrectText">
+              Sorry... Thats not the correct answer.<br> 
+              The picture with a key signature is highlighted above.
+            </div>
+          </div>
+        </section>
+        <section id="q4" data-check="421">
+          <div class="questionText">
+            If the time signature is 
+            <span>
+              <img class="qPic" src="/img/q3_44.png" alt="4/4 time">
+            </span> 
+            , what does the the <em>top</em> number represent?
+          </div>
+          <div class="answerWrapper">
+            <div class="topChoices">
+              <button class="choice c1" data-choice="0451">
+                4 <em>notes</em> per measure
+              </button>
+              <button class="choice c2" data-choice="6752">
+                4 <em>beats</em> per measure
+              </button>
+            </div>
+            <div class="bottomChoices">
+              <button class="choice c3" data-choice="7773">
+                4 <em>measures</em> per beat
+              </button>
+              <button class="choice c4" data-choice="8884">
+                4 <em>measures</em> per song
+              </button>
+            </div>
+          </div>
+          <div class="feedbackWrapper">
+            <button class="needHint">
+              Stuck? Click here for a hint
+            </button>
+            <div class="hint">
+              Remember, the time signature gives us information about the contents of each <em>measure</em>.
+            </div>
+            <div class="correctText">
+              Correct! Great job!
+            </div>
+            <div class="incorrectText">
+              Sorry... Thats not the correct answer.<br> 
+              The top number tells us how many <em>beats</em> per measure!
+            </div>
+          </div>
+        </section>
+        <section id="q5" data-check="147">
+          <div class="questionText">
+            If the time signature is 
+            <span>
+              <img class="qPic" src="/img/3_4.png" alt="3/4 time">
+            </span> 
+            , what does the the <em>bottom</em> number represent?
+          </div>
+          <div class="answerWrapper">
+            <div class="topChoices">
+              <button class="choice c1" data-choice="1231">
+                4 <em>beats</em> per measure
+              </button>
+              <button class="choice c2" data-choice="3212">
+                3 <em>beats</em> per measure
+              </button>
+            </div>
+            <div class="bottomChoices">
+              <button class="choice c3" data-choice="2343">
+                <em>eighth</em> note gets beat
+              </button>
+              <button class="choice c4" data-choice="4324">
+                <em>quarter</em> notes gets beat
+              </button>
+            </div>
+          </div>
+          <div class="feedbackWrapper">
+            <button class="needHint">
+              Stuck? Click here for a hint
+            </button>
+            <div class="hint">
+              Remember, the time signature gives us information about the contents of each <em>measure</em>.
+            </div>
+            <div class="correctText">
+              Correct! Great job!
+            </div>
+            <div class="incorrectText">
+              Sorry... Thats not the correct answer.<br> 
+              The bottom note tells us what note gets one beat, 4 represents a <em>quarter note</em>.
+            </div>
+          </div>
+        </section>
+        <section id="q6" data-check="125">
+          <div class="questionText">
+            Given this key signature
+            <span>
+              <img class="qPic" src="img/g_maj.png">
+            </span>
+            What notes will be sharp in the proceeding piece?
+          </div>
+          <div class="answerWrapper">
+            <div class="topChoices">
+              <button class="choice c1" data-choice="8871">
+                All of them
+              </button>
+              <button class="choice c2" data-choice="5542">
+                <em>F</em>s will be sharp
+              </button>
+            </div>
+            <div class="bottomChoices">
+              <button class="choice c3" data-choice="4463">
+                <em>C</em>s will be sharp
+              </button>
+              <button class="choice c4" data-choice="9024">
+                <em>E</em>s will be sharp
+              </button>
+            </div>
+          </div>
+          <div class="feedbackWrapper">
+            <button class="needHint">
+              Stuck? Click here for a hint
+            </button>
+            <div class="hint">
+              The sharps and flats in a key signature will be placed on the line or space of the corresponding note.
+            </div>
+            <div class="correctText">
+              Correct! Great job!
+            </div>
+            <div class="incorrectText">
+              Sorry... Thats not the correct answer.<br> 
+              Since the sharp is on the top line, all <em>F</em>s will be sharp.
+            </div>
+          </div>
+        </section>
+        <section id="q7" data-check="033">
+          <div class="questionText">
+            How many measures are pictured below?
+            <img id="measuresPic" src="img/measures.png" alt="q7_measures">
+          </div>
+          <div class="answerWrapper">
+            <div class="topChoices">
+              <button class="choice c1" data-choice="4721">
+                4
+              </button>
+              <button class="choice c2" data-choice="4562">
+                6
+              </button>
+            </div>
+            <div class="bottomChoices">
+              <button class="choice c3" data-choice="0893">
+                5
+              </button>
+              <button class="choice c4" data-choice="4324">
+                8
+              </button>
+            </div>
+          </div>
+          <div class="feedbackWrapper">
+            <button class="needHint">
+              Stuck? Click here for a hint
+            </button>
+            <div class="hint">
+              Each measure is seperated by a <em>vertical line</em>.
+            </div>
+            <div class="correctText">
+              Correct! Great job!
+            </div>
+            <div class="incorrectText">
+              Sorry... Thats not the correct answer.<br> 
+              There are <em>5</em> seperate measures pictured above.
+            </div>
+          </div>
+        </section>
+        <section id="q8" data-check="010">
+          <div class="questionText">
+            What note is this? 
+            <span>
+              <img class="qPic2" src="/img/785.png" alt="q8_note">
+            </span>
+          </div>
+          <div class="answerWrapper">
+            <div class="topChoices">
+              <button class="choice c1" data-choice="4721">
+                G
+              </button>
+              <button class="choice c2" data-choice="4562">
+                A
+              </button>
+            </div>
+            <div class="bottomChoices">
+              <button class="choice c3" data-choice="0893">
+                B
+              </button>
+              <button class="choice c4" data-choice="4324">
+                F
+              </button>
+            </div>
+          </div>
+          <div class="feedbackWrapper">
+            <button class="needHint">
+              Stuck? Click here for a hint
+            </button>
+            <div class="hint">
+              Remember, <em>F A C E</em> for the space notes and <em>Every Good Boy Does Fine</em> for the line notes.
+            </div>
+            <div class="correctText">
+              Correct! Great job!
+            </div>
+            <div class="incorrectText">
+              Sorry... Thats not the correct answer.<br> 
+              The note pictured above is a <em>G</em>.
+            </div>
+          </div>
+        </section>
+        <section id="q9" data-check="210">
+          <div class="questionText">
+            What note is this? 
+            <span>
+              <img class="qPic2" src="/img/453.png" alt="q8_note">
+            </span>
+          </div>
+          <div class="answerWrapper">
+            <div class="topChoices">
+              <button class="choice c1" data-choice="2481">
+                C
+              </button>
+              <button class="choice c2" data-choice="9032">
+                G
+              </button>
+            </div>
+            <div class="bottomChoices">
+              <button class="choice c3" data-choice="1103">
+                E
+              </button>
+              <button class="choice c4" data-choice="4424">
+                A
+              </button>
+            </div>
+          </div>
+          <div class="feedbackWrapper">
+            <button class="needHint">
+              Stuck? Click here for a hint
+            </button>
+            <div class="hint">
+              Remember, <em>F A C E</em> for the space notes and <em>Every Good Boy Does Fine</em> for the line notes.
+            </div>
+            <div class="correctText">
+              Correct! Great job!
+            </div>
+            <div class="incorrectText">
+              Sorry... Thats not the correct answer.<br> 
+              The note pictured above is a <em>C</em>.
+            </div>
+          </div>
+        </section>
+        <section id="q10" data-check="444">
+          <div class="questionText">
+            What note is this? 
+            <span>
+              <img class="qPic2" src="/img/230.png" alt="q8_note">
+            </span>
+          </div>
+          <div class="answerWrapper">
+            <div class="topChoices">
+              <button class="choice c1" data-choice="7841">
+                D
+              </button>
+              <button class="choice c2" data-choice="9012">
+                G
+              </button>
+            </div>
+            <div class="bottomChoices">
+              <button class="choice c3" data-choice="3333">
+                F
+              </button>
+              <button class="choice c4" data-choice="8944">
+                A
+              </button>
+            </div>
+          </div>
+          <div class="feedbackWrapper">
+            <button class="needHint">
+              Stuck? Click here for a hint
+            </button>
+            <div class="hint">
+              Remember, <em>F A C E</em> for the space notes and <em>Every Good Boy Does Fine</em> for the line notes.
+            </div>
+            <div class="correctText">
+              Correct! Great job!
+            </div>
+            <div class="incorrectText">
+              Sorry... Thats not the correct answer.<br> 
+              The note pictured above is an <em>A</em>.
+            </div>
+          </div>
+        </section>
+        <section id="finished">
+          <div class="questionText">
+            Congratulations! You finished the quiz!
+          </div>
+          <img id="musicNotes" src="img/musical-notes.png" alt="music notes">
+          <div class="questionText howMany">
+          </div>
+          <div class="questionText outcome">
+          </div>
+        </section>
+      </div>
     </div>
   </body>
 </html>
