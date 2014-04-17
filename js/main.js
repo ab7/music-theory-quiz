@@ -73,7 +73,7 @@ $(function () {
       question.find('button').prop('disabled', true);
       $('#progressCount').text((parseInt($('#progressCount').text().charAt(0), 16) + 1) + '/10');
       if ($('#progressCount').text().slice(0, 2) === '10') {
-        incorrectCount = $('button.incorrect').length;
+        incorrectCount = $('button.x').length;
         $('section, .prevQ, .nextQ').hide();
         $('#finished').fadeIn();
         $('.howMany').text('You got ' + (10 - incorrectCount) + ' out of 10 correct!');
