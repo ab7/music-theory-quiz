@@ -4,7 +4,7 @@
 
 html {
   font-family: sans-serif;
-  -ms-text-size-adjust: 100%; 
+  -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -235,7 +235,7 @@ th {
    ========================================================================== */
 
 body {
-  background: url('../img/body_background.jpg') no-repeat;
+  background: url('../static/img/body_background.jpg') no-repeat;
   background-size: cover;
   font: 100% 'Overlock', Arial;
   min-width: 900px;
@@ -267,7 +267,7 @@ section {
    ========================================================================== */
 
 .mainWrapper {
-  background-image: url('../img/question_background.jpg');
+  background-image: url('../static/img/question_background.jpg');
   border-top-left-radius: 30px;
   border-bottom-right-radius: 30px;
   height: 560px;
@@ -364,13 +364,13 @@ section {
 }
 
 .notes {
-  background-image: url('../img/notes2.png');
+  background-image: url('../static/img/notes2.png');
   background-size: 100%;
   text-indent: 200%;
 }
 
 .x {
-  background-image: url('../img/x.png');
+  background-image: url('../static/img/x.png');
   background-size: 100%;
   text-indent: 200%;
 }
@@ -414,7 +414,7 @@ section {
 #questionWrapper {
   height: 460px;
   width: 750px;
-  
+
 }
 
 .questionText {
@@ -500,7 +500,7 @@ section {
   font-size: 1.5em;
   outline: none;
   display: inline-block;
-  margin: 0 60px; 
+  margin: 0 60px;
 }
 
 .greyOut {
@@ -513,8 +513,8 @@ section {
    ========================================================================== */
 
 *, *:before, *:after {
-  -moz-box-sizing: border-box; 
-  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
  }
 
